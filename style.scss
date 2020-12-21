@@ -1,0 +1,230 @@
+$primary-font: "Poppins";
+$secondary-font: "Montserrat";
+$primary-color: #398ffc;
+$h2-color: #7a7a7a;
+$h3-color: #888;
+
+.blue {
+  color: $primary-color;
+}
+.primary-color {
+  color: #404044;
+}
+
+* {
+  font-family: $secondary-font;
+  line-height: 1.15;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white;
+  font-size: 1rem;
+  display: block;
+}
+
+h1,
+h2 {
+  font-family: $primary-font;
+}
+
+h1 {
+  color: $primary-color;
+  font-weight: 600;
+  font-size: 41px;
+  margin: 0;
+}
+
+h2 {
+  color: $h2-color;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  color: $h3-color;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  box-shadow: none;
+  color: #c36;
+  cursor: pointer;
+  &:hover {
+    color: #336;
+  }
+  &:active {
+    color: #336;
+  }
+}
+
+header {
+  max-width: 1200px;
+  padding: 20px 35px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.border {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #ebeced;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 48px 50px 0 20px;
+  #about-text {
+    max-width: 50%;
+    #about-header {
+      font-size: 36px;
+      font-weight: 500;
+      margin: 5px 0 0 0;
+      span {
+        padding: 0;
+        margin: 0;
+        margin-left: -2px;
+        color: #404044;
+        letter-spacing: -0.3px;
+      }
+    }
+    h4 {
+      color: #404044;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.9em;
+      letter-spacing: -0.4px;
+      margin: 23px 0 0.9rem 0;
+      padding: 0 76px 0 0;
+    }
+    p {
+      width: 100%;
+      font-size: 14px;
+      line-height: 2.2em;
+      letter-spacing: -0.2px;
+      font-weight: 400;
+      color: $h3-color;
+      margin-block-start: 1em;
+      margin-block-start: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+  }
+  #image-section {
+    max-width: 50%;
+    padding: 15px;
+  }
+  #meter-outer-section {
+    width: 100%;
+    padding: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    .meter-section-container {
+      width: 50%;
+      padding: 0 12px;
+      .meter-inner-container {
+        padding: 8px 0;
+        .meter-text {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+        }
+        .meter {
+          height: 15px;
+          position: relative;
+          background: #f4f4f4;
+          border-radius: 25px;
+          padding: 10px;
+          box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+          span {
+            content: "";
+            display: inline-table;
+            font-size: 1px;
+            height: 12px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: $primary-color;
+            overflow: hidden;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 20%;
+          }
+        }
+      }
+    }
+  }
+  #contact-section {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 12px 0;
+    h1 {
+      text-transform: uppercase;
+      color: #404044;
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: -0.2px;
+      font-weight: 400;
+      color: $h3-color;
+    }
+  }
+}
+
+footer {
+  max-width: 1200px;
+  padding: 0 35px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  p {
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    font-weight: 400;
+    color: $h3-color;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    h1 {
+      padding-bottom: 16px;
+    }
+  }
+  main {
+    #about-text {
+      max-width: 100%;
+    }
+    #image-section {
+      max-width: 100%;
+      display: none;
+    }
+    #meter-outer-section {
+      padding: 28px 0 28px;
+      .meter-section-container {
+        width: 100%;
+      }
+    }
+  }
+}
