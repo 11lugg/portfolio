@@ -3,6 +3,8 @@ $secondary-font: "Montserrat";
 $primary-color: #398ffc;
 $h2-color: #7a7a7a;
 $h3-color: #888;
+$light-grey: #f4f4f4;
+
 
 .blue {
   color: $primary-color;
@@ -111,6 +113,7 @@ main {
       letter-spacing: -0.4px;
       margin: 23px 0 0.9rem 0;
       padding: 0 76px 0 0;
+      text-align: justify;
     }
     p {
       width: 100%;
@@ -123,6 +126,7 @@ main {
       margin-block-start: 1em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
+      text-align: justify;
     }
   }
   #image-section {
@@ -147,7 +151,7 @@ main {
         .meter {
           height: 15px;
           position: relative;
-          background: #f4f4f4;
+          background: $light-grey;
           border-radius: 25px;
           padding: 10px;
           box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
@@ -168,6 +172,28 @@ main {
             top: 20%;
           }
         }
+      }
+    }
+  }
+  #portfolio-section {
+    width: 100%;
+    padding: 28px 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 12px;
+    row-gap: 12px;
+    
+    div {
+      display: flex;
+      grid-column: span 4;
+      border-radius: 5px;
+      background-color: $light-grey;
+      height: 140px;
+      cursor: pointer;
+      justify-content: center;
+
+      &:hover {
+        background-color: $h3-color;
       }
     }
   }

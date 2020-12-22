@@ -126,6 +126,7 @@ main #about-text h4 {
   letter-spacing: -0.4px;
   margin: 23px 0 0.9rem 0;
   padding: 0 76px 0 0;
+  text-align: justify;
 }
 
 main #about-text p {
@@ -142,6 +143,7 @@ main #about-text p {
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
+  text-align: justify;
 }
 
 main #image-section {
@@ -203,6 +205,36 @@ main #meter-outer-section .meter-section-container .meter-inner-container .meter
   margin: 0;
   padding: 0;
   top: 20%;
+}
+
+main #portfolio-section {
+  width: 100%;
+  padding: 28px 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  row-gap: 12px;
+}
+
+main #portfolio-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: span 4;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  height: 140px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #portfolio-section div:hover {
+  background-color: #888;
 }
 
 main #contact-section {
