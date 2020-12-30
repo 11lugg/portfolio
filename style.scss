@@ -5,7 +5,6 @@ $h2-color: #7a7a7a;
 $h3-color: #888;
 $light-grey: #f4f4f4;
 
-
 .blue {
   color: $primary-color;
 }
@@ -181,18 +180,49 @@ main {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 12px;
     row-gap: 12px;
-    
     div {
       display: flex;
+      flex-direction: column;
+      padding: 18px;
+      text-align: center;
+      justify-content: space-between;
       grid-column: span 4;
       border-radius: 5px;
       background-color: $light-grey;
-      height: 140px;
+      height: 250px;
       cursor: pointer;
-      justify-content: center;
-
-      &:hover {
-        background-color: $h3-color;
+      h3 {
+        color: $primary-color;
+        font-size: 19px;
+        font-weight: 600;
+        margin: 0;
+      }
+      p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 2.2em;
+        letter-spacing: -0.2px;
+        font-weight: 400;
+        color: $h3-color;
+      }
+      button {
+        all: unset;
+        color: $h3-color;
+         font-size: 14px;
+        cursor: pointer;
+        border: 1px solid $h3-color;
+        width: 100px;
+        border-radius: 5px;
+        padding: 4px;
+        font-family: $primary-font;
+        &:focus {
+          outline: $primary-color 1px auto;
+          color: $primary-color;
+        }
+        &:hover {
+          outline: $primary-color 1px auto;
+          color: $primary-color;
+        }
       }
     }
   }
@@ -250,6 +280,12 @@ footer {
       padding: 28px 0 28px;
       .meter-section-container {
         width: 100%;
+      }
+    }
+    #portfolio-section {
+      padding: 28px 0;
+      div {
+        grid-column: span 12;
       }
     }
   }

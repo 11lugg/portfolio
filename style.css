@@ -222,18 +222,58 @@ main #portfolio-section div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 18px;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   grid-column: span 4;
   border-radius: 5px;
   background-color: #f4f4f4;
-  height: 140px;
+  height: 250px;
   cursor: pointer;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-main #portfolio-section div:hover {
-  background-color: #888;
+main #portfolio-section div h3 {
+  color: #398ffc;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+
+main #portfolio-section div p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 2.2em;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: #888;
+}
+
+main #portfolio-section div button {
+  all: unset;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #888;
+  width: 100px;
+  border-radius: 5px;
+  padding: 4px;
+  font-family: "Poppins";
+}
+
+main #portfolio-section div button:focus {
+  outline: #398ffc 1px auto;
+  color: #398ffc;
+}
+
+main #portfolio-section div button:hover {
+  outline: #398ffc 1px auto;
+  color: #398ffc;
 }
 
 main #contact-section {
@@ -302,6 +342,12 @@ footer p {
   }
   main #meter-outer-section .meter-section-container {
     width: 100%;
+  }
+  main #portfolio-section {
+    padding: 28px 0;
+  }
+  main #portfolio-section div {
+    grid-column: span 12;
   }
 }
 /*# sourceMappingURL=style.css.map */
